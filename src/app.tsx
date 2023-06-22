@@ -1,24 +1,12 @@
 import React from 'react';
-import logo from './assets/icons/logo.svg';
-import {SApp, SHeader, SLink, SLogo} from "./assets/styles/app.styles";
+import { Timer } from './components/timer';
+import { AppContainer } from './assets/styles/app.style';
 
 function App() {
     return (
-        <SApp>
-            <SHeader>
-                <SLogo src={logo} alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <SLink
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </SLink>
-            </SHeader>
-        </SApp>
+        <AppContainer>
+            <Timer />
+        </AppContainer>
     );
 }
 

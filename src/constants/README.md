@@ -1,4 +1,0 @@
-# CONSTANTS
-
-Constants Storage Section
-

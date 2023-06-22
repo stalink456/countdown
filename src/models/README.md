@@ -1,4 +1,0 @@
-# MODELS
-
-Models Storage Section
-

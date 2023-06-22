@@ -1,4 +1,0 @@
-# STORE
-
-Redux Storage Section
-

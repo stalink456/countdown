@@ -1,41 +1,72 @@
-# Getting Started with Create React App
+# Задание 1. Timer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Таймер отсчитывает время с начала запуска, отображая минуты, секунды и миллисекунды.  
+Реализуем в виде отдельного компонента Timer.
 
-## Available Scripts
+-   2 кнопки: запустить/пауза/возобновить и сбросить
+-   При запуске время начинает отсчет с нуля
+-   После паузы можно возобновить или сбросить
+-   Если сбросить в процессе отсчета - отсчет останавливается
 
-In the project directory, you can run:
+## Создание компоненты Timer
 
-### `yarn start`
+1. Создайте компоненту таймер и добавьте:
+    - Заголовок с названием
+    - Поле где будет отображаться текущее значение таймера
+    - две кнопки
+2. Напишите логику, которая будет выполняться по кликам на кнопку.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Требования
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Компонента таймер должна быть [мемоизирована](https://ru.reactjs.org/docs/react-api.html#reactmemo)
+2. Обработчики событий (коллбеки) должен быть [мемоизирован](https://ru.reactjs.org/docs/hooks-reference.html#usecallback)
+3. Обязательное использование useState
+4. Форматирование времени тоже должно быть мемоизировано
+5. Используем Styled Components (MUI)
+6. Подключенный prettier, eslint и публикация на github pages.
+7. Без ошибок eslint
 
-### `yarn build`
+# Задание 2. Countdown
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Реализуем в виде отдельного компонента Countdown.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Блок ввода начального времени (выносим в отдельный компонент):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Можно установить время с помощью двух полей (минуты и секунды) или слайдера (компонент Slider) - от 0 до 60 минут. Когда перемещаешь слайдер - он должен изменять время с шагом 15 секунд. Ввод с клавиатуры должен ограничиваться 720 минутами. Слайдер и текстовые инпуты должны быть связаны друг с другом (менять значение текстовых, если двигаем слайдер и наоборот)
+-   После запуска поля блокируются до сброса таймера
 
-### `yarn eject`
+Блок результата:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   Отображается время в минутах и секундах до конца обратного отсчета.
+-   Отображается визуальный прогресс (через компонент Progress), сколько в процентах от начального времени прошло
+-   По окончанию таймера проигрывается звуковой сигнал (на ваше усмотрение)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Блок управления:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   2 кнопки: запустить/пауза и сброс
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Создание компоненты Countdown
 
-## Learn More
+Реализуем в виде отдельного компонента Countdown.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Блок ввода начального времени (выносим в отдельный компонент):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Можно установить время с помощью двух полей (минуты и секунды) или слайдера (компонент Slider) - от 0 до 60 минут. Когда перемещаешь слайдер - он должен изменять время с шагом 15 секунд. Ввод с клавиатуры должен ограничиваться 720 минутами. Слайдер и текстовые инпуты должны быть связаны друг с другом (менять значение текстовых, если двигаем слайдер и наоборот)
+-   После запуска поля блокируются до сброса таймера
+
+Блок результата:
+
+-   Отображается время в минутах и секундах до конца обратного отсчета.
+-   Отображается визуальный прогресс (через компонент Progress), сколько в процентах от начального времени прошло
+-   По окончанию таймера проигрывается звуковой сигнал (на ваше усмотрение)
+
+Блок управления:
+
+-   2 кнопки: запустить/пауза и сброс
+
+## Требования
+
+1. Подключенный prettier, eslint и публикация на github pages.
+2. Компоненты должны быть оптимизированы
+3. Используем Styled Components (MUI)
+4. Не должно быть ошибок в eslint
