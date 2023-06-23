@@ -69,6 +69,7 @@ export const useTimer = () => {
         timerRef.current = undefined;
         setSeconds(0);
         setMinutes(0);
+        setTotalCount(0);
         setIsDisabledInput(false);
     }, []);
 
