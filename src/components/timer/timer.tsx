@@ -31,14 +31,8 @@ export const Timer: React.FC = React.memo(() => {
 
                 <Countdown>
                     <CustomInput
-                        text='Минуты'
-                        value={minutes}
-                        handleOnChange={handleChangeTime}
-                        isDisabled={isDisabledInput}
-                    />
-                    <CustomInput
-                        text='Секунды'
-                        value={seconds}
+                        minutes={minutes}
+                        seconds={seconds}
                         handleOnChange={handleChangeTime}
                         isDisabled={isDisabledInput}
                     />

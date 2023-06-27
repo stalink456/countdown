@@ -78,18 +78,22 @@ export const useTimer = () => {
             if (value === undefined) {
                 const { name, value } = event.target;
 
-                if (name === 'minutes') {
+                if (name === 'minutes' && Number(value) >= 0 && Number(value) <= 720) {
                     setMinutes(+value);
-                } else {
+                }
+
+                if (name === 'seconds' && Number(value) >= 0 && Number(value) <= 59) {
                     setSeconds(+value);
                 }
             } else {
                 const { name } = event.target;
 
-                if (name === 'minutes') {
-                    setMinutes(value as number);
-                } else {
-                    setSeconds(value as number);
+                if (name === 'minutes' && Number(value) >= 0 && Number(value) <= 720) {
+                    setMinutes(+value);
+                }
+
+                if (name === 'seconds' && Number(value) >= 0 && Number(value) <= 59) {
+                    setSeconds(+value);
                 }
             }
         },
